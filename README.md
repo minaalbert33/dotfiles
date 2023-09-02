@@ -1,7 +1,7 @@
 # Mina dotfiles
 
-This is the configuration of my Arch linux installation.
-I'm using the Hyprland (Wayland).
+This is the configuration of my Arch linux System.
+I'm using the Hyprland (Window Manager) (Wayland) .
 
 ## Common Packages
 
@@ -21,7 +21,7 @@ I'm using the Hyprland (Wayland).
 - Screenshots: hyprshot
 - Wallpapers: hyprpaper
 
-## All the keybindings related to Hyprland (the window manager) and launching apps will be found in /hypr/hyprland.conf
+## All the keybindings related to Hyprland and launching apps will be found in /hypr/hyprland.conf
   
 <!---## Screenshots & Video -->
 
