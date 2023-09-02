@@ -21,6 +21,7 @@ I'm using the Hyprland (Wayland).
 - Screenshots: hyprshot
 - Wallpapers: hyprpaper
 
+## All the keybindings related to Hyprland (the window manager) and launching apps will be found in /hypr/hyprland.conf
   
 <!---## Screenshots & Video -->
 
