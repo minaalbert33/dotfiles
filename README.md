@@ -13,7 +13,9 @@ I'm using the Hyprland (Window Manager) (Wayland) .
 - Font: Font Awesome, JetBrains Mono
 - Menu: Rofi (dmenu Theme)
 - Web Browsers: brave
-- Filemanager: ranger, dolphin
+- Filemanager: lf, thunar
+- Notification Daemon: dunst
+
 
 ## Hyprland
 
