@@ -26,7 +26,6 @@
         "memory",
         "temperature",
         "backlight",
-        "sway/language",
         "battery",
         "battery#bat2"],
 
@@ -108,7 +107,7 @@
     },
     "clock": {
         "timezone": "Africa/Cairo",
-        "format": "{:%d %m %Y   %H:%M}"
+        "format": "{:%d %m %Y  |  %H:%M:%S}"
         ,"interval":1
     },
     "cpu": {
@@ -121,12 +120,12 @@
     },
     "backlight": {
         "device": "light",
-        "format": "{percent}%",
+        "format": "{icon}   {percent}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
         "format": " {icon}    {capacity}", 
-        "interval": 2,
+        "interval": 5,
         "states": {
             "warning": 30,
             "critical": 15
@@ -189,8 +188,15 @@
     },
     "temperature": {
         "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 80,
         "format": " GPU: {temperatureC}°C ",
         "interval": 1
+    }
+    ,
+    "custom/separator": {
+        "format": "|",
+        // "interval": "once",
+        "tooltip": false
     }
     
 }
