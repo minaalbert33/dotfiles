@@ -21,8 +21,7 @@ I'm using the Hyprland (WM) (Wayland) .
 
 - Status Bar: waybar
 - Screenshots: hyprshot
-- Wallpapers: hyprpaper
-
+- Wallpapers: swaybg
 ## All the keybindings related to Hyprland and launching apps will be found in /hypr/hyprland.conf
   
 <!---## Screenshots & Video -->
