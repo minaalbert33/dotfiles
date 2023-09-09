@@ -1,7 +1,7 @@
 # Mina dotfiles
 
 This is the configuration of my Arch linux System.
-I'm using the Hyprland (Window Manager) (Wayland) .
+I'm using the Hyprland (WM) (Wayland) .
 
 ## Common Packages
 
