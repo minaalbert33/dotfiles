@@ -4,28 +4,27 @@ This is the configuration of my Arch linux System.
 I'm using the Hyprland (WM) (Wayland) .
 
 ## Common Packages
-
+- Window Manager & Compositor: hyprland
 - Terminal: alacritty
-- Editor: vim, visual studio code
+- Editor: vim, code (visual studio code)
 - Image Viewer: sxiv
 - Video Player: mpv, vlc
 - Document Viewer: zathura (vim based)
-- Font: Font Awesome, JetBrains Mono
-- Menu: Rofi (dmenu Theme)
-- Web Browsers: brave
+- Font: ttf-jetbrains-mono 
+- Menu: rofi 
+- Web Browser: brave-bin 
+- Recording tool: wf-recorder
 - Filemanager: lf, thunar
 - Notification Daemon: dunst
-
-
-## Hyprland
-
 - Status Bar: waybar
 - Screenshots: hyprshot
 - Wallpapers: swaybg
-## All the keybindings related to Hyprland and launching apps will be found in /hypr/hyprland.conf
+
+## All the keybindings related to windows and some shortcuts are located in .config/hypr/hyprland.conf
   
 <!---## Screenshots & Video -->
 
-## NOTE: These Repository is not complete, you may face problems while using some of the dotfiles or scripts
+## NOTES:
+- This repository is not complete, you may face problems while using some of the dotfiles or scripts
 
 
