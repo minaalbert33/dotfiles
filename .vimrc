@@ -23,9 +23,9 @@ call plug#end()
   let g:auto_save = 1
   let g:auto_save_events = ["InsertLeave", "TextChanged"]
   let $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
-  set mouse! "Allows mouse usage inside vim. Great for noobs.
+  set mouse=a "Allows mouse usage inside vim. Great for noobs.
   set clipboard=unnamedplus
-  set ttymouse=
+  set ttymouse=a
   set cursorline
   highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
 	set noerrorbells
@@ -60,13 +60,13 @@ call plug#end()
 " Plugin Shortcuts
 	map <Leader>f :NERDTreeToggle<CR>
 	map <C-\> :Goyo<CR>
-  -- vnoremap<C-x> "*y :let @+=@*<CR>
+  "  vnoremap<C-x> "*y :let @+=@*<CR>
   nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
   nnoremap <C-f> :Files!<CR>
   nnoremap <Leader>l :Tabularize /
   let g:better_escape_shortcut = 'jj'
   let g:better_escape_interval = 250
-  -- For Compiling C++ files
+  " For Compiling C++ files
   autocmd vimEnter *.cpp map <F8> :w <CR> :!clear ; g++ --std=c++17 %; if [ -f a.out ]; then time ./a.out; rm a.out; fi <CR>
 " General Shortcuts
   nnoremap S :%s//g<Left><Left> 
