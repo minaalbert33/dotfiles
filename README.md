@@ -18,7 +18,11 @@ I'm using the Hyprland (WM) (Wayland) .
 - Notification Daemon: dunst
 - Status Bar: waybar
 - Screenshots: hyprshot
-- Wallpapers: swaybg
+
+
+## Screenshots
+- Desktop
+![](screenshots/desktop.png)
 
 ## All the keybindings related to windows and some shortcuts are located in .config/hypr/hyprland.conf
   
