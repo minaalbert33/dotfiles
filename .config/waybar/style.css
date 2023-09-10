@@ -94,7 +94,7 @@ button:hover {
     padding: 0 0 0 0 ;
     margin: 0 0 0 0;
     color: #ffffff;
-    border-radius: 2px;
+    border-radius: 0px;
     /* opacity: 0.5; */
 }
 
@@ -120,7 +120,7 @@ button:hover {
 #battery {
     /* background-color: #3c444b; */
     color: #fff;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 #battery.charging, #battery.plugged {

@@ -12,14 +12,14 @@
         "custom/media"
     ],
     "modules-center": [
-        "clock",
-        "hyprland/language"
+        "sway/workspaces"
     ],
 
     "modules-right": [ 
-        "custom/media",       
+ //       "custom/media",       
         "tray", 
         "mpd", 
+        "hyprland/language",
         "pulseaudio",
         "network",
         "cpu" , 
@@ -27,26 +27,12 @@
         "temperature",
         "backlight",
         "battery",
-        "battery#bat2"],
+        "clock",
+        "battery#bat2",
+        ],
 
 
     // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
      // "hyprland/window": {
     //     "format": "{initialTitle}",
     //     "separate-outputs": true
@@ -105,9 +91,10 @@
         // "icon-size": 21,
         "spacing": 10
     },
-    "clock": {
+    "clock":{
         "timezone": "Africa/Cairo",
-        "format": "{:%d %m %Y  |  %H:%M:%S}"
+        "format": "{:%a %d %m  -  %H:%M:%S}  ",
+        "tooltip-format": "<big>{:%Y %B \t week: %V }</big>\n<tt>{calendar}</tt>"
         ,"interval":1
     },
     "cpu": {
