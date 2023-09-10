@@ -18,17 +18,27 @@ I'm using the Hyprland (WM) (Wayland) .
 - Notification Daemon: dunst
 - Status Bar: waybar
 - Screenshots: hyprshot
+- System Monitor: btop
 
 
 ## Screenshots
 - Desktop
+  
 ![](screenshots/desktop.png)
 
-## All the keybindings related to windows and some shortcuts are located in .config/hypr/hyprland.conf
+- rofi menu (dmenu theme)
+
+![](screenshots/rofi.png)
+
+- vim and btop
+
+![](screenshots/vimbtop.png)
+
   
 <!---## Screenshots & Video -->
 
 ## NOTES:
+- All the keybindings related to windows and other ones are located in .config/hypr/hyprland.conf
 - This repository is not complete, you may face problems while using some of the dotfiles or scripts
 - Some packages are in the official repositories and other from the AUR (Arch User Repository)
 
