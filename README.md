@@ -26,5 +26,5 @@ I'm using the Hyprland (WM) (Wayland) .
 
 ## NOTES:
 - This repository is not complete, you may face problems while using some of the dotfiles or scripts
-
+- Some packages are in the official repositories and other from the AUR (Arch User Repository)
 
