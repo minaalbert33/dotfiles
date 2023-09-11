@@ -34,7 +34,11 @@ This is the configuration of my Arch linux System using Wayland
 
 ![](screenshots/vimbtop.png)
 
-  
+- lf 
+
+![](screenshots/lf.png)
+
+
 <!---## Screenshots & Video -->
 
 ## NOTES:
