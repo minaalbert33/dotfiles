@@ -1,7 +1,6 @@
 # Mina dotfiles
 
-This is the configuration of my Arch linux System.
-I'm using the Hyprland (WM) (Wayland) .
+This is the configuration of my Arch linux System using Wayland
 
 ## Common Packages
 - Window Manager & Compositor: hyprland
@@ -19,6 +18,7 @@ I'm using the Hyprland (WM) (Wayland) .
 - Status Bar: waybar
 - Screenshots: hyprshot
 - System Monitor: btop
+- Wallapers: swaybg
 
 
 ## Screenshots
