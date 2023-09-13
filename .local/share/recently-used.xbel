@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///" added="2023-09-13T15:19:21.318410Z" modified="2023-09-13T15:19:21.318422Z" visited="2023-09-13T15:19:21.318414Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2023-09-13T15:19:21.318417Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/mina" added="2023-09-13T15:19:29.877967Z" modified="2023-09-13T15:19:29.877981Z" visited="2023-09-13T15:19:29.877971Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Thunar" exec="&apos;thunar %u&apos;" modified="2023-09-13T15:19:29.877976Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/mina/.nvidia-settings-rc" added="2023-09-13T15:59:32.356235Z" modified="2023-09-13T15:59:32.356245Z" visited="2023-09-13T15:59:32.356238Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="nvidia-settings" exec="&apos;nvidia-settings %u&apos;" modified="2023-09-13T15:59:32.356241Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///D/Baba/Brave%20Passwords.csv" added="2023-09-13T16:38:52.974213Z" modified="2023-09-13T16:38:52.974231Z" visited="2023-09-13T16:38:52.974218Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/csv"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2023-09-13T16:38:52.974224Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///D/Baba/bookmarks_7_27_23.html" added="2023-09-13T16:39:02.587199Z" modified="2023-09-13T16:39:02.587216Z" visited="2023-09-13T16:39:02.587204Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2023-09-13T16:39:02.587210Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
