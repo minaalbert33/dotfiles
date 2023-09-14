@@ -20,6 +20,7 @@ This is the configuration of my Arch linux System using Wayland
 - System Monitor: btop
 - Wallapers: swaybg
 - Clipboard Manager: copyq, xclip
+- Backlight Controller: light
 
 
 ## Screenshots
