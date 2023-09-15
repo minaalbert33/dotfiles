@@ -9,6 +9,7 @@ This is the configuration of my Arch linux System using Wayland
 - Image Viewer: sxiv
 - Video Player: mpv, vlc
 - Document Viewer: zathura (vim based)
+- Zathura pdf plugin:  zathura-pdf-mupdf
 - Font: ttf-jetbrains-mono 
 - Menu: rofi 
 - Web Browser: brave-bin 
