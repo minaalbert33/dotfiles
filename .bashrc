@@ -17,9 +17,12 @@ alias q='sudo pacman -Q'
 alias u='sudo pacman -Syu'
 alias za='zathura'
 alias vi='vim'
+alias rm='rm -i'
 alias transa='trans :en+ara'
 export HYPRSHOT_DIR='/home/mina/pictures/screenshots'
 export RANGER_LOAD_DEFAULT_RC=false
+export EDITOR="vim"
+export TERMINAL="alacritty"
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[32m\]\w \[\e[0m\]>\[\e[0m\] '
 #eval "$(starship init bash)"

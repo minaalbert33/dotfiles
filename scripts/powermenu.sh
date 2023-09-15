@@ -5,5 +5,5 @@ choice=$(echo -e "exit\npoweroff\nreboot\nsuspend\nhibernate\n" | rofi -dmenu "C
 ["$choice" = "exit"] && exit 
 [ "$choice" = "poweroff" ] && poweroff
 [ "$choice" = "reboot" ] && reboot
-[ "$choice" = "suspend" ] && systemctl suspend-then-hibernate
+[ "$choice" = "suspend" ] && systemctl suspend
 [ "$choice" = "hibernate" ] && systemctl hibernate

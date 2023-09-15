@@ -3,9 +3,9 @@ set hidden true
 set ignorecase true
 set icons true
 #set drawbox true
-set previewer ~/.config/lf/preview
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/scope'
 set preview true
-set cleaner ~/.config/lf/cleaner
 set ratios 1:2:3
 # Basic Settings
 set hidden true
@@ -25,11 +25,16 @@ cmd mkfile ${{
   touch $ans 
 }}
 
-#cmd setwallpaper ${{
- #   cp "$f" ~/.config/wall.jpg
-  #  xwallpaper --zoom "$f"
-   # betterlockscreen -u "$f" --fx
-#}}
+cmd openwith ${{
+    printf "Enter program name: "
+
+    read ans
+    [$ans = "vim"] &&  alacritty -e vim "$fx" & disown
+    $ans "$fx" & disown
+
+
+
+}}
 
 # dedicated keys for file opener actions
 
@@ -37,11 +42,11 @@ cmd mkfile ${{
 cmd open ${{    
     test -L $f && f=$(readlink -f $f)    
     case "$(file --mime-type "$f" -b)" in    
-        text/*) vim -p "$fx"   ;;    
-        application/pdf) zathura "$fx" & ;;
-        image/*) sxiv "$fx" & ;;
-        audio/*) vlc "$fx" & ;; 
-        video/*) vlc "$fx" & ;;
+        text/*) alacritty -e vim  "$fx" & disown  ;;    
+        application/pdf) zathura "$fx" & disown ;;
+        image/*) sxiv "$fx" & disown;;
+        audio/*) vlc "$fx" & disown;; 
+        video/*) vlc "$fx" & disown;;
         *) for f in $fx; do xdg-open $f > /dev/null 2> /dev/null & done;;    
     esac    
 }}  
@@ -83,9 +88,26 @@ cmd restore_trash ${{
   trash-restore
 }}
 
+
+cmd final_delete ${{
+    printf "Are U sure to delete this ?: "
+    read ans
+    if [$ans = "y"];then
+        if [-d "$fx"]; then
+            rm "$fx"
+        else
+            rm -rf "$fx"
+        fi  
+    else
+      
+    fi   
+
+}}
+
 # Bindings
 map d
 map m
+map o openwith
 
 
 map au unarchive
@@ -94,6 +116,7 @@ map ae $wine "$f"
 # Basic Functions
 map . set hidden!
 map dd trash
+map df final_delete
 map dr restore_trash
 map p paste
 map x cut
