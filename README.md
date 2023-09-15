@@ -22,6 +22,7 @@ This is the configuration of my Arch linux System using Wayland
 - Wallapers: swaybg
 - Clipboard Manager: copyq, xclip
 - Backlight Controller: light
+- Command line Translator: translate-shell
 
 
 ## Screenshots
