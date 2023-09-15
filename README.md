@@ -32,7 +32,7 @@ This is the configuration of my Arch linux System using Wayland
 
 - rofi menu (dmenu theme)
 
-![](screenshots/rofi1.png)
+![](screenshots/rofi.png)
 
 - vim and btop
 
