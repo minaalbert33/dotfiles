@@ -30,7 +30,7 @@ This is the configuration of my Arch linux System using Wayland
   
 ![](screenshots/desktop.png)
 
-- rofi menu (dmenu theme)
+- rofi menu 
 
 ![](screenshots/rofi.png)
 
