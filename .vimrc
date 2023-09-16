@@ -9,11 +9,23 @@ Plug 'mbbill/undotree' "Creates an undo tree
 Plug 'preservim/nerdtree' "File browser inside vim
 Plug 'godlygeek/tabular' "Auto formatting
 Plug 'plasticboy/vim-markdown' "Markdown syntax highlighting
-Plug 'wakatime/vim-wakatime' "Wakatime tracker
 Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
 Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
 Plug '907th/vim-auto-save' "auto saves files as you edit
 Plug 'jdhao/better-escape.vim' "remaps esc key to jj
+Plug 'LunarWatcher/auto-pairs'
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-syntastic/syntastic'
+Plug 'lilydjwg/colorizer'
+Plug 'preservim/tagbar'
+Plug 'Yggdroot/indentLine'
+
+
+
+
+
 call plug#end()
 
 " Startup Settings
