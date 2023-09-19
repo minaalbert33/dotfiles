@@ -1,5 +1,5 @@
 {
-    "layer": "bottom", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 25, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
@@ -17,7 +17,7 @@
 
     "modules-right": [ 
  //       "custom/media",       
-        "tray", 
+        "tray",
         "mpd", 
         "hyprland/language",
         "pulseaudio",
@@ -41,20 +41,10 @@
         "format": "{}",
         "format-en": "en",
         "format-ar":"ar",
-        "keyboard-name": "at-translated-set-2-keyboard"
-    }
-    ,
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
+        //"backend": "keyd",
+        "keyboard-name": "keyd-virtual-keyboard"
     },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-    "mpd": {
+       "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
@@ -99,7 +89,7 @@
     },
     "cpu": {
         "format": "CPU: {usage}",
-        "tooltip": false,
+        "tooltip": true,
         "interval": 1
     },
     "memory": {
@@ -174,9 +164,9 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+       "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input", 
         "critical-threshold": 80,
-        "format": " GPU: {temperatureC}°C ",
+        "format": " GPU: {}°C ",
         "interval": 1
     }
     ,
