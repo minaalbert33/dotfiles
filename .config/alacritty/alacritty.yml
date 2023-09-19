@@ -6,6 +6,8 @@
 # file being loaded last. If a field is already present in a previous import, it
 # will be replaced.
 #
+import:
+ - ~/.config/alacritty/themes/themes/gnome_terminal.yaml
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 #import:
@@ -47,8 +49,8 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-    x: 10
-    y: 10
+    x: 5
+    y: 5
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -131,12 +133,11 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family:  monospace
-
+    family: JetBrainsMono Nerd Font  
 
     # The `style` can be specified to pick a specific face.
-    style: Bold
-
+    style: Regular 10 
+ 
   # Bold font face
   #bold:
     # Font family
@@ -171,7 +172,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 12.5
+  size: 11.5
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -198,11 +199,11 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+  primary:
+    background: '#1d1f21'
+    foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
     #
@@ -219,9 +220,9 @@ font:
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  #cursor:
-  #  text: CellBackground
-  #  cursor: CellForeground
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
 
   # Vi mode cursor colors
   #
@@ -239,12 +240,12 @@ font:
   #search:
     # Allowed values are CellForeground/CellBackground, which reference the
     # affected cell, or hexadecimal colors like #ff00ff.
-    #matches:
-    #  foreground: '#000000'
-    #  background: '#ffffff'
-    #focused_match:
-    #  foreground: '#ffffff'
-    #  background: '#000000'
+    matches:
+      foreground: '#000000'
+      background: '#ffffff'
+    focused_match:
+      foreground: '#ffffff'
+      background: '#000000'
 
   # Keyboard hints
   #hints:
