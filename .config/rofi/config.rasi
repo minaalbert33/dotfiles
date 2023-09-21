@@ -1,2 +1,4 @@
-
-@theme "/usr/share/rofi/themes/nord-oneline.rasi"
+/***
+@theme "/home/mina/.config/rofi/themes/nord-oneline.rasi"
+***/
+@theme "/home/mina/.config/rofi/themes/rounded-nord-dark.rasi"
