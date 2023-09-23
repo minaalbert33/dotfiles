@@ -6,8 +6,8 @@ local plugins = {
     config = function ()
       require("nvterm").setup()
     end,
-    
   },
+
   -- colorscheme
   {
     "navarasu/onedark.nvim",
@@ -133,6 +133,7 @@ local plugins = {
     event = { "BufReadPre", "BufNewFile" },
     config = function()
       require "plugins.configs.lspconfig"
+      require "lspconfig"
     end,
     dependencies = {
       -- formatting , linting

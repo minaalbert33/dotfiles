@@ -14,6 +14,7 @@ map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
 map("n", "<leader>fo", "<cmd> Telescope oldfiles <CR>")
 map("n", "<leader>fw", "<cmd> Telescope live_grep <CR>")
 map("n", "<leader>gt", "<cmd> Telescope git_status <CR>")
+map("n", "<leader>x", "<cmd> :bw <CR>")
 
 -- To Move through windows
 map("n", "<C-h>", "<C-w>h")
@@ -31,6 +32,7 @@ map("n", "<C-q>", "<cmd> bd <CR>")
 map("n", "<C-q>", "<cmd> bd <CR>")
 map("n", "<C-q>", "<cmd> bd <CR>")
 map("n", "<C-q>", "<cmd> bd <CR>")
+map("n", "<Esc>", "<cmd> :noh <CR>")
     
 vim.api.nvim_set_keymap('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', { noremap = true, silent = true })
 

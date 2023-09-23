@@ -1,3 +1,4 @@
+require'lspconfig'.pyright.setup{}
 -- Global mappings.
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
@@ -66,10 +67,12 @@ lspconfig.lua_ls.setup {
 }
 
 -- setup multiple servers with same default options
-local servers = { "tsserver", "html", "cssls" }
+local servers = { "tsserver", "html", "cssls", "clangd" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     capabilities = capabilities,
   }
 end
+
+
