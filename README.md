@@ -5,7 +5,7 @@ This is the configuration of my Arch linux System using Wayland
 ## Common Packages
 - Window Manager & Compositor: hyprland
 - Terminal: alacritty
-- Editor: vim, code (visual studio code)
+- Editor: nvim, code (visual studio code)
 - Image Viewer: sxiv
 - Video Player: mpv, vlc
 - Document Viewer: zathura (vim based)
