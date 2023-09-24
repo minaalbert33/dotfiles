@@ -1,5 +1,9 @@
-
 local plugins = {
+    { "nyoom-engineering/oxocarbon.nvim", lazy = false },
+    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+    {"huyvohcmc/atlas.vim"},
+    { 'rockerBOO/boo-colorscheme-nvim'},
+
   "nvim-lua/plenary.nvim",
   {
     "NvChad/nvterm",

@@ -2,12 +2,9 @@ local map = vim.keymap.set
 
 -- general mappings
 map("n", "<C-s>", "<cmd> w <CR>")
-map("i", "jk", "<ESC>")
 
 -- nvimtree
 map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
---map("n", "<C-h>", "<cmd> NvimTreeFocus <CR>")
--- map("n",    )
 
 -- telescope
 map("n", "<leader>ff", "<cmd> Telescope find_files <CR>")
