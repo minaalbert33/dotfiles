@@ -19,7 +19,7 @@ This is the configuration of my Arch linux System using Wayland
 - Status Bar: waybar
 - Screenshots: hyprshot
 - System Monitor: btop
-- Wallapers: swaybg
+- Wallpapers Manager: swaybg
 - Clipboard Manager: copyq, xclip
 - Backlight Controller: light
 - Command line Translator: translate-shell
