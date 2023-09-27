@@ -20,3 +20,5 @@ vim.opt.rtp:prepend(lazypath)
 require "plugins"
 
 vim.cmd("colorscheme boo")
+vim.cmd("set mouse=")
+

@@ -2,11 +2,10 @@ local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim" -- path where its go
 local map = vim.keymap.set
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+-- local api = require "nvim-tree.api"
 
-map("n", "<C-s>", "<cmd> w <CR>")
+-- map("n", "<C-s>", "<cmd> w <CR>")
 map("n", "<Esc>", "<cmd> :noh <CR>")
---
--- nvimtree
 map("n", "<C-n>", "<cmd> NvimTreeToggle <CR>")
 
 -- telescope
@@ -17,6 +16,8 @@ map("n", "<leader>gt", "<cmd> Telescope git_status <CR>")
 map("n", "<leader>x", "<cmd> :bd! <CR>")
 -- map("t", "<Esc>", "<C-\\><C-n>")
 
+map('v', "J", ":m '>+1<CR>gv=gv")
+map('v', "K", ":m '<-2<CR>gv=gv")
 
 
 -- bufferline
@@ -31,21 +32,35 @@ map('n', '<leader>6', '<Cmd>BufferLineGoToBuffer 6<CR>', { noremap = true, silen
 map('n', '<leader>7', '<Cmd>BufferLineGoToBuffer 7<CR>', { noremap = true, silent = true })
 map('n', '<leader>8', '<Cmd>BufferLineGoToBuffer 8<CR>', { noremap = true, silent = true })
 
+-- Replacing current word with some text
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 -- comment.nvim
-map("n", "<leader>/", function()
-  require("Comment.api").toggle.linewise.current()
-end)
+map("n", "<leader>/", function() require("Comment.api").toggle.linewise.current() end)
 
 map("v", "<leader>/", "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>")
 
+local function listReference()
+    require("telescope.builtin").lsp_references()
+end
 
--- Map F6 to run cpp files
-map('n', '<F6>', ':lua run_cpp_file()<CR>', { noremap = true, silent = true })
+local function listSymbols()
+    require("telescope.builtin").lsp_document_symbols()
+end
 
--- tth --> Toggle Horizontal Terminal
--- ttv --> Toggle Vertical Terminal
-map('n', 'tth', ':lua toggle_terminal("horizontal")<CR>', { noremap = true, silent = true })
-map('n', 'ttv', ':lua toggle_terminal("vertical")<CR>', { noremap = true, silent = true })
+local function get()
+    require("telescope.builtin").treesitter()
+end
+
+map("n", "<leader>lr", listReference)
+map("n", "<leader>ls", listSymbols) map("n", "<leader>ss", get)
+map("n", "<leader>f", vim.lsp.buf.format)
+
+
+-- <leader>tth --> Toggle Horizontal Terminal
+-- <leader>ttv --> Toggle Vertical Terminal
+map('n', '<leader>tth', [[:lua require("nvterm.terminal").toggle("horizontal") <CR>]], { noremap = true, silent = true })
+map('n', '<leader>tth', [[:lua require("nvterm.terminal").toggle("vertical") <CR>]], { noremap = true, silent = true })
 
 -- Allow Navigate Windows from terminal mode
 map('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
@@ -54,22 +69,34 @@ map('t', '<C-j>', '<C-\\><C-n><C-w>j', { noremap = true, silent = true })
 map('t', '<C-k>', '<C-\\><C-n><C-w>k', { noremap = true, silent = true })
 map('t', '<C-l>', '<C-\\><C-n><C-w>l', { noremap = true, silent = true })
 
+-- Resize Buffers
+map("n", "<C-A-k>", ":resize +2<CR>", { noremap = true, silent = true })
+map("n", "<C-A-j>", ":resize -2<CR>", { noremap = true, silent = true })
+map("n", "<C-A-h>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+map("n", "<C-A-l>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+
+
+-- Stay in indent mode
+map("v", "<", "<gv", { noremap = true, silent = true })
+map("v", ">", ">gv", { noremap = true, silent = true })
+
 -- To Move through windows
 map("n", "<C-h>", "<C-w>h")
 map("n", "<C-j>", "<C-w>j")
 map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
-local terminal = require("nvterm.terminal")
-
-function toggle_terminal(layout)
-    terminal.toggle(layout)
-end
+-- Map F6 to run cpp files
+map('n', '<F6>', ':lua runCppFile()<CR>', { noremap = true, silent = true })
 
 -- Function to run current CPP file in a horizontal terminal
-function run_cpp_file()
-    local current_file = vim.fn.expand("%:p")  -- Get the full path of the current file
+function runCppFile()
+    local current_file = vim.fn.expand("%:p") -- Get the full path of the current file
     local command = string.format("clear; g++ --std=c++20 %s -o a.out && ./a.out; rm a.out", current_file)
-    terminal.send(command, "horizontal")
+    require("nvterm.terminal").send(command, "horizontal")
 end
-local tele = require("telescope.builtin");
+
+--     nnoremap <A-h> <cmd>lua require('swap-buffers').swap_buffers('h')<CR>
+--     nnoremap <A-l> <cmd>lua require('swap-buffers').swap_buffers('l')<CR>
+
+map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

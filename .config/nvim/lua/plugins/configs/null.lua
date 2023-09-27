@@ -5,5 +5,6 @@ null_ls.setup {
   sources = {
     format.stylua, -- for lua
     format.prettier, -- for web dev
+    null_ls.builtins.formatting.clang_format,
   },
 }

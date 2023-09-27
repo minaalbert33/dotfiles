@@ -1,18 +1,29 @@
 local plugins = {
     { "nyoom-engineering/oxocarbon.nvim", lazy = false },
-    { "bluz71/vim-moonfly-colors",        name = "moonfly", lazy = false, priority = 1000 },
-    { "huyvohcmc/atlas.vim" },
+
+    { "bluz71/vim-moonfly-colors",        name = "moonfly", lazy = false, priority = 1000 }, { "huyvohcmc/atlas.vim" },
+
     { 'rockerBOO/boo-colorscheme-nvim' },
+
     { "elentok/format-on-save.nvim" },
 
-    "nvim-lua/plenary.nvim",
+    { 'toppair/peek.nvim',             run = 'deno task --quiet build:fast' },
+    
+    { "caenrique/swap-buffers.nvim" },
+
+    { "nvim-lua/plenary.nvim" },
+
+    {
+        'stevearc/oil.nvim',
+    },
+    {'mg979/vim-visual-multi'},
+
     {
         "NvChad/nvterm",
         config = function()
             require("nvterm").setup()
         end,
     },
-
     -- colorscheme
     {
         "navarasu/onedark.nvim",
@@ -141,6 +152,12 @@ local plugins = {
         "williamboman/mason.nvim",
         build = ":MasonUpdate",
         cmd = { "Mason", "MasonInstall" },
+        opts = {
+            ensure_installed = {
+                "clangd",
+                "clang-format",
+            }
+        },
         config = function()
             require("mason").setup()
         end,
@@ -158,6 +175,7 @@ local plugins = {
             -- formatting , linting
             {
                 "jose-elias-alvarez/null-ls.nvim",
+                event = "VeryLazy",
                 config = function()
                     require "plugins.configs.null"
                 end,
@@ -241,3 +259,29 @@ local plugins = {
 }
 
 require("lazy").setup(plugins, require "plugins.configs.lazy")
+
+
+
+
+local function my_on_attach(bufnr)
+    local api = require "nvim-tree.api"
+
+    local function opts(desc)
+        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    end
+
+    -- default mappings
+    api.config.mappings.default_on_attach(bufnr)
+
+    -- custom mappings
+    vim.keymap.set('n', '<C-t>', api.tree.change_root_to_parent, opts('Up'))
+    vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+end
+
+-- pass to setup along with your other options
+require("nvim-tree").setup {
+    ---
+    on_attach = my_on_attach,
+    ---
+}
+require("oil").setup()

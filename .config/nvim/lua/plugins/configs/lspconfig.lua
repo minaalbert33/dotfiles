@@ -66,6 +66,26 @@ lspconfig.lua_ls.setup {
   },
 }
 
+
+lspconfig.clangd.setup {
+  cmd = { 'clangd', '--background-index' },
+  filetypes = { 'c', 'cpp', 'objc', 'objcpp' },
+  on_attach = vim.lsp.common_on_attach,
+  settings = {
+    clangd = {
+      filetypes = {
+        c = 'c',
+        cpp = 'cpp',
+        objc = 'objective-c',
+        objcpp = 'objective-cpp',
+      },
+      format = {
+        style = 'google', -- Specify your preferred formatting style here
+      },
+    },
+  },
+}
+
 -- setup multiple servers with same default options
 local servers = { "tsserver", "html", "cssls", "clangd" }
 
